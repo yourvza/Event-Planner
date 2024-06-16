@@ -9,7 +9,7 @@ var timeBlocks = document.querySelectorAll('.time-block');
 var saveButton = document.querySelectorAll('.saveBtn');
 var clearButton = document.querySelector("#ClearBtn");
 
-
+colorTimeBlock();
 
 
 //first, we will need to add color to the time blocks based on the current time
@@ -17,22 +17,26 @@ function colorTimeBlock()
 {
   //make a for loop so each time block is checked
   for (let i = 0; i < timeBlocks.length; i++)
-    {
-        var timeBlock = $(timeBlocks[i]);
-        var timeBlocksID = $(timeBlocks[i]).attr('id');
+  {
+    var timeBlock = $(timeBlocks[i]);
+    var timeBlocksID = $(timeBlocks[i]).attr('id');
 
-        //we will need the string we will get from the id attr into an integer so we use parseint
-        var hour = parseInt(timeBlocksID);
+    //we will need the string we will get from the id attr into an integer so we use parseint
+    var hour = parseInt(timeBlocksID);
 
-        //Now that we have a variable set to timeblocks, we can give it a refrence point (past,present,or future)
-        if (hour < currentHour) {
-            timeBlock.addClass('past');
-        } else if (currentHour === hour){
-            timeBlock.addClass('present');
-        } else {
-            timeBlock.addClass('future');
-        }
+    //Now that we have a variable set to timeblocks, we can give it a refrence point (past,present,or future)
+    if (hour < currentHour) {
+      timeBlock.addClass('past');
     }
+     else if (currentHour === hour)
+    {
+      timeBlock.addClass('present');
+    } 
+      else 
+    {
+      timeBlock.addClass('future');
+    }
+  }
     
 }
 
