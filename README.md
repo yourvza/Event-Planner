@@ -15,3 +15,4 @@ Please refer to the LICENSE in the repo
 
 ## Link
 https://github.com/yourvza/Event-Planner
+https://yourvza.github.io/Event-Planner/
